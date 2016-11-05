@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
+import {APP_BASE_HREF} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -40,7 +41,7 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
       { path: 'about', component: AboutComponent },
     ])
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
